@@ -1,0 +1,64 @@
+/* this is a CSS document for contact */
+
+#kontakttekst-boks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 20px 50px;
+}
+
+#kontakt-titel {
+    background-color: #387077;
+    padding: 50px;
+}
+
+#text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+#kontaktinfo-boks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 20px 50px;
+}
+
+.kontakt {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.kontakt img {
+    height: 20px;
+    width: 20px;
+}
+
+.camilla-kontakt {
+    padding: 20px 50px;
+}
+
+.camilla-kontakt img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+@media screen and (min-width: 600px) {
+
+    #kontakt-tekstimg {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        padding: 50px 0;
+    }
+
+    .camilla-kontakt img {
+        max-width: 500px;
+        min-width: 300px;
+    }
+}

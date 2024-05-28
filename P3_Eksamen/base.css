@@ -1,0 +1,219 @@
+/* base css for alle sider */
+.logo {
+    font-family: "Anton", sans-serif;
+    font-size: 40px;
+    color: #4C4D4F;
+    margin-left: 50px;
+}
+
+body {
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    color: #4C4D4F;
+    font-weight: normal;
+    font-style: normal;
+    background-color: #FDFDFD;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    color: #F5F5F5;
+}
+
+h2 {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
+p {
+    margin: 0;
+}
+
+/* navigation styles starter her */
+header {
+    background-color: #F5F5F5;
+    text-align: center;
+    position: sticky;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: black;
+    height: 2px;
+    width: 1.5em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    font-weight: bold;
+    background: #F5F5F5;
+    width: 100%;
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+    z-index: 999;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a {
+    font-weight: bold;
+    color: #4C4D4F;
+    text-decoration: none;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+    color: #99B6B3;
+}
+
+.nav-toggle:checked ~ nav {
+    transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+/* footer styles starter her */
+#footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #F5F5F5;
+}
+
+#kontakt-boks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 50px;
+    line-height: 0;
+}
+
+.kontakt-info {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.kontakt-info img {
+    height: 16px;
+    width: 16px;
+}
+
+.kontakt-info p {
+    padding: 20px 0;
+}
+
+#copyright {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 600px) {
+    
+    .nav-toggle-label {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr; 
+        justify-content: space-between;
+    }
+
+    nav {
+        all: unset;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 500px;
+    }
+
+    nav ul {
+        width: 100%;
+        display: flex;
+    }
+
+    nav li {
+        margin-bottom: 0;
+        width: 100%;
+        white-space: nowrap;
+        margin-left: unset;
+    }
+
+    nav a {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    header {
+        justify-content: center;
+    }
+
+    body > header > div {
+        padding-right: 340px;
+    }
+}

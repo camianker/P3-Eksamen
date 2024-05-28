@@ -1,0 +1,11 @@
+/* This is CSS for animationworkshop.html */
+.sprite {
+    width: 500px;
+    height: 500px;
+    background: url('billeder/logoanimation6.png') 0 0 no-repeat;
+    animation: play 5s steps(7) infinite;
+}
+@keyframes play {
+    0%{background-position: 0px;}
+    100% { background-position: -3500px; }
+}
