@@ -8,7 +8,6 @@
 
 body {
     font-family: "Source Sans 3", sans-serif;
-    font-optical-sizing: auto;
     color: #4C4D4F;
     font-weight: normal;
     font-style: normal;
@@ -19,7 +18,7 @@ body {
 
 h1 {
     font-family: "Anton", sans-serif;
-    font-weight: 400;
+    font-weight: normal;
     font-style: normal;
     margin-block-start: 0;
     margin-block-end: 0;
@@ -28,8 +27,7 @@ h1 {
 
 h2 {
     font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
+    font-weight: 700;
     font-style: normal;
     font-variation-settings:
       "wdth" 100;
